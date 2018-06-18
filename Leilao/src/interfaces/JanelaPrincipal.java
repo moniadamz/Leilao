@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class JanelaPrincipal {
 
@@ -39,11 +41,16 @@ public class JanelaPrincipal {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 311);
+		frame.setBounds(100, 100, 478, 311);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnCadastrarUsurio = new JButton("Cadastrar usu\u00E1rio");
+		btnCadastrarUsurio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		btnCadastrarUsurio.setBounds(28, 11, 122, 23);
 		frame.getContentPane().add(btnCadastrarUsurio);
 		
@@ -52,15 +59,15 @@ public class JanelaPrincipal {
 		frame.getContentPane().add(btnCadastrarLeilo);
 		
 		JTextArea mostrarLances = new JTextArea();
-		mostrarLances.setBounds(190, 44, 234, 182);
+		mostrarLances.setBounds(190, 44, 262, 182);
 		frame.getContentPane().add(mostrarLances);
 		
 		JButton btnEncerrar = new JButton("Encerrar");
-		btnEncerrar.setBounds(335, 238, 89, 23);
+		btnEncerrar.setBounds(363, 237, 89, 23);
 		frame.getContentPane().add(btnEncerrar);
 		
 		JLabel lblLancesAtO = new JLabel("Lances at\u00E9 o momento:");
-		lblLancesAtO.setBounds(190, 13, 127, 19);
+		lblLancesAtO.setBounds(190, 13, 142, 19);
 		frame.getContentPane().add(lblLancesAtO);
 	}
 }
